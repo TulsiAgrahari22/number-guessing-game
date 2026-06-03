@@ -11,6 +11,7 @@ This is a simple random number guessing game written in C.
 - Compile the program using a C compiler (gcc).
 - Run the executable file.
 - Enter numbers until you guess the correct one.
+- its also show how many second hour and minute you took
 
 ## Language Used
 - C Programming
