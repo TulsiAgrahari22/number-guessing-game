@@ -8,7 +8,9 @@ int main()
     srand(time(0));
         int random_number = (rand()%100)+1;
     int guessed;
-    int no_of_guesses=0;
+        int no_of_guesses=0;
+     time_t start_time, end_time;
+    time(&start_time);
         do{
             printf(" Guess the number:-");
             scanf("%d",&guessed);
@@ -28,9 +30,17 @@ int main()
             }
         }
            while(guessed!=random_number);
-           
-            printf("you guesses the number in %d guesses\n",no_of_guesses); 
+           time(&end_time);
+
+    int total_seconds = (int)difftime(end_time, start_time);
+
+    int hours = total_seconds / 3600;
+    int minutes = (total_seconds % 3600) / 60;
+    int seconds = total_seconds % 60;
+
+    printf("\nYou guessed the number in %d guesses.\n", no_of_guesses);
+    printf("Time taken: %d hour(s), %d minute(s), %d second(s).\n",
+           hours, minutes, seconds);
           return 0;
         }
- 
 
